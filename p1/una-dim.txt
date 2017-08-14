@@ -1,0 +1,16 @@
+pos <- 0
+ salida<-0
+ origen <- c(0)
+  dur <- 100
+  for (t in 1:dur) {
+    if (runif(1) < 0.5) {
+      pos <- pos + 1
+    } else {
+      pos <- pos - 1
+    }
+ if(pos == origen){
+ salida <- salida + 1
+ print(pos)
+ }
+ }
+print(salida)

@@ -1,0 +1,23 @@
+
+    dim <- 2
+    dur <- 20
+    pos <- rep(0, dim)
+    origen <- c(0,0)
+    contador <- 0
+    for (t in 1:dur) {
+        cambiar <- sample(1:dim, 1)
+        cambio <- 1
+        if (runif(1) < 0.5) {
+            cambio <- -1
+        }
+        pos[cambiar] <- pos[cambiar] + cambio
+        d <- dist(pos)
+        print(pos)
+        if (pos[1] == origen[1] & pos[2] == origen[2]) {
+            contador <- contador + 1       
+        } 
+    } 
+
+
+print(contador)
+ 
